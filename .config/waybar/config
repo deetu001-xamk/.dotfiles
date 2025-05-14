@@ -1,44 +1,51 @@
 {
-  "layer": "top",
-  "position": "top",
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "pulseaudio", "battery", "tray"],
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "network", "battery", "tray"],
 
-  "hyprland/workspaces": {
-    "on-click": "activate"
-  },
+    "hyprland/workspaces": {
+        "on-click": "activate"
+    },
 
-  "clock": {
-    "interval": 1,
-    "format": "{:%a %d %b %H:%M:%S}"
-  },
+    "clock": {
+        "interval": 1,
+        "format": "{:%a %d %b %H:%M:%S}"
+    },
 
-  "cpu": {
-    "interval": 2,
-    "format": "CPU: {usage}%"
-  },
+    "cpu": {
+        "interval": 2,
+        "format": "CPU: {usage}%"
+    },
 
-  "memory": {
-    "interval": 2,
-    "format": "RAM: {}%"
-  },
+    "memory": {
+        "interval": 2,
+        "format": "RAM: {}%"
+    },
 
-  "pulseaudio": {
-    "format": "Vol: {volume}%",
-    "scroll-step": 5,
-    "on-click": "pavucontrol"
-  },
+    "pulseaudio": {
+        "format": "Vol: {volume}%",
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
 
-  "battery": {
-    "format": "BAT: {capacity}%",
-    "format-charging": "⚡ {capacity}%",
-    "interval": 30
-  },
+    "battery": {
+        "format": "BAT: {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "interval": 30
+    },
 
-  "tray": {
-    "icon-size": 16,
-    "spacing": 10
-  }
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "network": {
+        "interface": "wlan0", 
+        "format": "{ifname}: {ipaddr} ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
+        "tooltip": true,
+        "tooltip-format": "{essid} {signalStrength}%"
+    }
+
 }
 
