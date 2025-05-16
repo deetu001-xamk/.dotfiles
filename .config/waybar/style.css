@@ -1,40 +1,99 @@
+@define-color base      #191724;
+@define-color surface   #1f1d2e;
+@define-color overlay   #26233a;
+@define-color muted     #6e6a86;
+@define-color subtle    #908caa;
+@define-color text      #e0def4;
+@define-color love      #eb6f92;
+@define-color gold      #f6c177;
+@define-color rose      #ebbcba;
+@define-color pine      #31748f;
+@define-color foam      #9ccfd8;
+@define-color iris      #c4a7e7;
+@define-color highlight #2a283e;
+
 * {
-  font-family: JetBrainsMono Nerd Font, sans-serif;
-  font-size: 12px;
   border: none;
-  border-radius: 0;
-  padding: 1px 4px;
-  margin: 0;
-  color: #ffffff;
+  border-radius: 6px;
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+  font-size: 14px;
+  min-height: 0;
 }
 
 window#waybar {
-  background: #3c3836;
+  background-color: @base;
+  color: @text;
+}
+
+tooltip {
+  background: @overlay;
+  color: @text;
+  border-radius: 6px;
+}
+
+#workspaces {
+  background: @overlay;
+  margin: 4px;
+  padding: 0 5px;
 }
 
 #workspaces button {
-  padding: 0 0px;
-  color: #928374;
-  background: transparent;
-  border: none;
+  padding: 0 6px;
+  color: @subtle;
 }
 
 #workspaces button.active {
-  color: #928374;
-  background: #8ec07c;
-  border-radius: 2px;
+  color: @text;
+  background: @highlight;
 }
 
 #clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
 #cpu,
 #memory,
-#pulseaudio,
-#battery,
-#tray,
-#window {
-  background: #313244;
-  margin: 0 4px;
-  padding: 2px 10px;
-  border-radius: 8px;
+#custom-media {
+  background-color: @surface;
+  padding: 0 10px;
+  margin: 4px 4px;
+}
+
+#clock {
+  color: @foam;
+}
+
+#battery {
+  color: @gold;
+}
+
+#battery.charging {
+  color: @foam;
+}
+
+#pulseaudio {
+  color: @rose;
+}
+
+#network {
+  color: @iris;
+}
+
+#cpu {
+  color: @pine;
+}
+
+#memory {
+  color: @love;
+}
+
+#custom-media {
+  color: @iris;
+}
+
+#tray {
+  background: @overlay;
+  padding: 0 6px;
 }
 
