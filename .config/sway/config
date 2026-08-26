@@ -20,7 +20,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 # Recommends: foot
-set $term alacritty 
+set $term foot 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -36,13 +36,13 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 smart_borders on
 default_border pixel 2
 
-client.focused #928374 #928374 #928374 #928374 #928374  
+client.focused #7aa2f7 #7aa2f7 #7aa2f7 #7aa2f7 #7aa2f7
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /home/nuppi/.dotfiles/wallpapers/cat-painting.png fill
+output * bg /home/nuppi/.dotfiles/wallpapers/anime1.jpg fill
 #
 # Example configuration:
 #
@@ -114,7 +114,7 @@ input type:keyboard {
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu -theme Arc-Dark
