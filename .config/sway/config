@@ -126,6 +126,8 @@ input type:keyboard {
     # mouse button for dragging.
     floating_modifier $mod normal
 
+    bindsym $mod+Shift+i exec swaymsg -t get_outputs | grep -q '"transform": "normal"' && swaymsg output - transform 270 || swaymsg output - transform normal
+    bindsym $mod+Shift+s exec grimshot save area
     # Reload the configuration file
     bindsym $mod+Shift+r reload
 
