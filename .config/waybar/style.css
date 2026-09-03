@@ -4,8 +4,8 @@
 }
 
 window#waybar {
-    background-color: #16161e;
-    color: #c0caf5;
+    background-color: #000000;
+    color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
 }

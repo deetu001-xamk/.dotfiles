@@ -1,35 +1,16 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
+# Sway config
 
-
-# Window rules
 for_window [app_id="anki"] floating enable
 for_window [title="MEGAsync"] floating enable
 
-### Variables
-#
-# Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
-# Recommends: foot
 set $term foot 
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-# Recommends: rofi-wayland
 set $rofi_cmd rofi \
         -terminal '$term'
-# Shows a combined list of the applications with desktop files and
-# executables from PATH.
-# TODO: add window with the next release of rofi-wayland
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 # Borders
@@ -38,55 +19,12 @@ default_border pixel 2
 
 client.focused #7aa2f7 #7aa2f7 #7aa2f7 #7aa2f7 #7aa2f7
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /home/nuppi/.dotfiles/wallpapers/anime1.jpg fill
-#
-# Example configuration:
-#
+output * bg ~/.dotfiles/Wallpapers/forest-cabin.jpg fill
+
 output DP-1 mode 3840x2160@144.00Hz
 output DP-1 scale 1.5
 output DP-1 pos 0 0
-output HDMI-A-1 mode 3840x2160@120.00Hz
-output HDMI-A-1 scale 1.5
 
-
-# Workspaces
-workspace "1" output "DP-1"
-workspace "2" output "DP-1"
-workspace "3" output "DP-1"
-
-workspace "7" output "HDMI-A-1"
-workspace "8" output "HDMI-A-1"
-workspace "9" output "HDMI-A-1"
-
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
 
 input type:pointer {
 
@@ -103,8 +41,6 @@ input type:keyboard {
     xkb_variant mac
 
 }
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
 #
