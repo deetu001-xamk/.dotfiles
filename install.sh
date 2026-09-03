@@ -17,8 +17,7 @@ sudo dnf install -y \
   btop \
   zsh \
   stow \
-  gh \
-  alacritty \
+  foot \
   fcitx5 \
   fcitx5-mozc \
   fcitx5-configtool \

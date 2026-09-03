@@ -42,6 +42,8 @@ input type:keyboard {
 
 }
 
+bindsym $mod+n exec ~/.dotfiles/.config/sway/scripts/nightlight.sh
+
 ### Key bindings
 #
 # Basics:
